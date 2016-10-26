@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Name: David Guthrie
+ * Project: Final Project - Book Catalog
+ * Date: 10/24/16
+ * Purpose: To keep track of a collection of books, and to allow searching
+ * 
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +24,16 @@ namespace FinalProject_Guthrie
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
