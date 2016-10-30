@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalProject_Guthrie
 {
-    public partial class frmSearch : Form
+    public partial class frmAdvancedFind : Form
     {
-        public frmSearch()
+        public frmAdvancedFind()
         {
             InitializeComponent();
-        }
-
-        private void btnAdvancedFind_Click(object sender, EventArgs e)
-        {
-            frmAdvancedFind newAdvSearch = new frmAdvancedFind();
-
-            newAdvSearch.ShowDialog();
         }
     }
 }

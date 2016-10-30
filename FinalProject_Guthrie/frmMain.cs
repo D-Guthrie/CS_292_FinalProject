@@ -26,13 +26,24 @@ namespace FinalProject_Guthrie
             InitializeComponent();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSeachMain_Click(object sender, EventArgs e)
         {
+            frmSearch newSearch = new frmSearch();
 
+            newSearch.ShowDialog();
         }
 
-        private void btnAddBook_Click(object sender, EventArgs e)
+        private void btnAddBookMain_Click(object sender, EventArgs e)
         {
+            frmAddBook newAddBook = new frmAddBook();
+
+            newAddBook.ShowDialog();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+            // lblNumberOfBooks.Text=
 
         }
     }

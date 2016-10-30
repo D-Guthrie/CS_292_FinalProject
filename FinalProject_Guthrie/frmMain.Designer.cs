@@ -30,8 +30,10 @@
         {
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnAddBook = new System.Windows.Forms.Button();
+            this.btnSeachMain = new System.Windows.Forms.Button();
+            this.btnAddBookMain = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNumberOfBooks = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +41,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatusStrip});
-            this.statusStrip.Location = new System.Drawing.Point(0, 312);
+            this.statusStrip.Location = new System.Drawing.Point(0, 169);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(491, 22);
             this.statusStrip.TabIndex = 0;
@@ -50,36 +52,59 @@
             this.lblStatusStrip.Name = "lblStatusStrip";
             this.lblStatusStrip.Size = new System.Drawing.Size(0, 17);
             // 
-            // btnSearch
+            // btnSeachMain
             // 
-            this.btnSearch.Location = new System.Drawing.Point(13, 13);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 126);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSeachMain.Location = new System.Drawing.Point(13, 13);
+            this.btnSeachMain.Name = "btnSeachMain";
+            this.btnSeachMain.Size = new System.Drawing.Size(94, 129);
+            this.btnSeachMain.TabIndex = 1;
+            this.btnSeachMain.Text = "Search";
+            this.btnSeachMain.UseVisualStyleBackColor = true;
+            this.btnSeachMain.Click += new System.EventHandler(this.btnSeachMain_Click);
             // 
-            // btnAddBook
+            // btnAddBookMain
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(129, 13);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(110, 126);
-            this.btnAddBook.TabIndex = 2;
-            this.btnAddBook.Text = "Add";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            this.btnAddBookMain.Location = new System.Drawing.Point(113, 13);
+            this.btnAddBookMain.Name = "btnAddBookMain";
+            this.btnAddBookMain.Size = new System.Drawing.Size(94, 129);
+            this.btnAddBookMain.TabIndex = 2;
+            this.btnAddBookMain.Text = "Add Book";
+            this.btnAddBookMain.UseVisualStyleBackColor = true;
+            this.btnAddBookMain.Click += new System.EventHandler(this.btnAddBookMain_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(234, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Number of books:";
+            // 
+            // lblNumberOfBooks
+            // 
+            this.lblNumberOfBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNumberOfBooks.Location = new System.Drawing.Point(332, 41);
+            this.lblNumberOfBooks.Name = "lblNumberOfBooks";
+            this.lblNumberOfBooks.Size = new System.Drawing.Size(100, 23);
+            this.lblNumberOfBooks.TabIndex = 4;
+            this.lblNumberOfBooks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 334);
-            this.Controls.Add(this.btnAddBook);
-            this.Controls.Add(this.btnSearch);
+            this.ClientSize = new System.Drawing.Size(491, 191);
+            this.Controls.Add(this.lblNumberOfBooks);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAddBookMain);
+            this.Controls.Add(this.btnSeachMain);
             this.Controls.Add(this.statusStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Book Catalog";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -91,8 +116,10 @@
 
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusStrip;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.Button btnSeachMain;
+        private System.Windows.Forms.Button btnAddBookMain;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNumberOfBooks;
     }
 }
 

@@ -1,1 +1,10 @@
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\FinalProject_Guthrie.exe.config
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\FinalProject_Guthrie.exe
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\FinalProject_Guthrie.pdb
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.csprojResolveAssemblyReference.cache
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.frmMain.resources
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.frmSearch.resources
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.Properties.Resources.resources
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.csproj.GenerateResource.Cache
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.exe
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.pdb

@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace FinalProject_Guthrie
 {
-    public partial class frmSearch : Form
+    public partial class frmAddBook : Form
     {
-        public frmSearch()
+        public frmAddBook()
         {
             InitializeComponent();
         }
 
-        private void btnAdvancedFind_Click(object sender, EventArgs e)
+        private void radSearchOnline_CheckedChanged(object sender, EventArgs e)
         {
-            frmAdvancedFind newAdvSearch = new frmAdvancedFind();
+            // enable group box
+        }
 
-            newAdvSearch.ShowDialog();
+        private void radEnterInfoManual_CheckedChanged(object sender, EventArgs e)
+        {
+            // enable group box
         }
     }
 }
