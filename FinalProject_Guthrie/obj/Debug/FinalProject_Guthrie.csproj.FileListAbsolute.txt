@@ -8,3 +8,5 @@ C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.csproj.GenerateResource.Cache
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.exe
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.pdb
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.frmAddBook.resources
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\obj\Debug\FinalProject_Guthrie.frmAdvancedFind.resources

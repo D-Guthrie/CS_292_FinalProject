@@ -19,12 +19,19 @@ namespace FinalProject_Guthrie
 
         private void radSearchOnline_CheckedChanged(object sender, EventArgs e)
         {
-            // enable group box
+            // enable Google API Search group box
+            if (radSearchOnline.Checked)
+            {
+                grpSeachOnline.Enabled = true;
+                grpEnterManually.Enabled = false;
+            }
         }
 
         private void radEnterInfoManual_CheckedChanged(object sender, EventArgs e)
         {
-            // enable group box
+            // enable Manual Entry group box
+            grpSeachOnline.Enabled = false;
+            grpEnterManually.Enabled = true;
         }
     }
 }
