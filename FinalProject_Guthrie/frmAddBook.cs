@@ -33,5 +33,25 @@ namespace FinalProject_Guthrie
             grpSeachOnline.Enabled = false;
             grpEnterManually.Enabled = true;
         }
+
+        private void btnSearchBooksAPI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddBookFromAPI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddBookManual_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://developers.google.com/books/");
+        }
     }
 }

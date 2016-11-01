@@ -23,5 +23,10 @@ namespace FinalProject_Guthrie
 
             newAdvSearch.ShowDialog();
         }
+
+        private void btnSeach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

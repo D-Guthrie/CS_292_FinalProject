@@ -61,6 +61,7 @@
             this.btnAdvSearch.TabIndex = 3;
             this.btnAdvSearch.Text = "Search";
             this.btnAdvSearch.UseVisualStyleBackColor = true;
+            this.btnAdvSearch.Click += new System.EventHandler(this.btnAdvSearch_Click);
             // 
             // dgvAdvancedFind
             // 

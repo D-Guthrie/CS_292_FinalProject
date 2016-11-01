@@ -16,5 +16,10 @@ namespace FinalProject_Guthrie
         {
             InitializeComponent();
         }
+
+        private void btnAdvSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

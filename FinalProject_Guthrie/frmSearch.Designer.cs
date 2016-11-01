@@ -100,6 +100,7 @@
             this.btnSeach.TabIndex = 2;
             this.btnSeach.Text = "Search";
             this.btnSeach.UseVisualStyleBackColor = true;
+            this.btnSeach.Click += new System.EventHandler(this.btnSeach_Click);
             // 
             // dataGridView1
             // 
