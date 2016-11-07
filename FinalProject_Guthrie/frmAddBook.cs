@@ -79,8 +79,8 @@ namespace FinalProject_Guthrie
         //public static BooksService service = new BooksService(new BaseClientService.Initializer
         //    {
         //        ApplicationName = "ISBNBookSearch",
-        //        ApiKey = "AIzaSyALb68oL2O6XutBPjo3nhDlfM-ZlLZIi_8",
-        //    });
+        //        ApiKey = "ABCDEFGHIJKLMNOP123456789",  
+        //    });     // Place Google Books API key here
 
         //public void TestIsbnSearch()
         //{
@@ -98,7 +98,7 @@ namespace FinalProject_Guthrie
     {
         //You need to substitute this with your own API key.
         //For more information, visit http://wp.me/paUXZ-TY 
-        private static string API_KEY = "AIzaSyALb68oL2O6XutBPjo3nhDlfM-ZlLZIi_8";
+        private static string API_KEY = "ABCDEFGHIJKLMNOP123456789";  // Place Google Books API key here
 
         public static BooksService service = new BooksService(new BaseClientService.Initializer
         {
