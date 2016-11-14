@@ -7,10 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+// For the Google Books API Search
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Books.v1;
-using Google.Apis.Requests;
-using Google.Apis.Services;
 using Google.Apis.Books.v1.Data;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
 
 namespace FinalProject_Guthrie
 {
@@ -28,7 +32,7 @@ namespace FinalProject_Guthrie
             {
                 grpSeachOnline.Enabled = true;
                 grpEnterManually.Enabled = false;
-                
+
             }
         }
 
@@ -46,14 +50,45 @@ namespace FinalProject_Guthrie
 
         private void btnAddBookFromAPI_Click(object sender, EventArgs e)
         {
-            string isbn = "0071807993";
-            var output = BookSearch.SearchISBN(isbn);
+            string isbn = "978-1118847282";
 
-            var result = output.Result;
-            MessageBox.Show("\nBook Name: " + result.VolumeInfo.Title);
-            MessageBox.Show("Author: " + result.VolumeInfo.Authors.FirstOrDefault());
-            MessageBox.Show("Publisher: " + result.VolumeInfo.Publisher);
+            try
+            {
+                new Program().Run().Wait();
+            }
+            catch (AggregateException ex)
+            {
+                foreach (var e in ex.InnerExceptions)
+                {
+                    MessageBox.Show("ERROR: " + e.Message);
+                }
+            }
+
+            //var output = BookSearch.SearchISBN(isbn);
+
+            //var result = output.Result;
+            //MessageBox.Show("\nBook Name: " + result.VolumeInfo.Title);
+            //MessageBox.Show("Author: " + result.VolumeInfo.Authors.FirstOrDefault());
+            //MessageBox.Show("Publisher: " + result.VolumeInfo.Publisher);
         }
+
+        private async Task Run()
+        {
+            UserCredential credential;
+            using (var stream = new Google.Apis.Books.v1.BooksService
+            {
+                credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    GoogleClientSecrets.Load(stream).Secrets,
+                    new[] { BooksService.Scope.Books },
+                    "user", CancellationToken.None, new FileDataStore("Books.ListMyLibrary"));
+
+
+            // Create the service.
+            var service = new BooksService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = "Books API Sample",
+            }); }
 
         private void btnAddBookManual_Click(object sender, EventArgs e)
         {
@@ -120,4 +155,6 @@ namespace FinalProject_Guthrie
         }
 
     }
+
+
 }
