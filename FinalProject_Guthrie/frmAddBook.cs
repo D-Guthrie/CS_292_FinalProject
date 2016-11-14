@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
+using System.IO;
 
 // For the Google Books API Search
 using Google.Apis.Auth.OAuth2;
@@ -20,6 +22,26 @@ namespace FinalProject_Guthrie
 {
     public partial class frmAddBook : Form
     {
+        private static string API_KEY = "INSERT API KEY HERE";
+
+        public static BooksService service = new BooksService(new BaseClientService.Initializer
+        {
+            ApplicationName = "ISBNBookSearch",
+            ApiKey = API_KEY,
+        });
+
+        public static async Task<Volume> SearchISBN(string isbn)
+        {
+            var result = await service.Volumes.List(isbn).ExecuteAsync();
+            if (result != null && result.Items != null)
+            {
+                var item = result.Items.FirstOrDefault();
+                return item;
+            }
+            return null;
+        }
+
+
         public frmAddBook()
         {
             InitializeComponent();
@@ -43,52 +65,23 @@ namespace FinalProject_Guthrie
             grpEnterManually.Enabled = true;
         }
 
-        private void btnSearchBooksAPI_Click(object sender, EventArgs e)
+        public async void btnSearchBooksAPI_Click(object sender, EventArgs e)
         {
-
+            string isbn = txtISBNSearchAPI.Text;
+            var output = await SearchISBN(isbn);
+            var result = output;
+            
+            txtTitle.Text = result.VolumeInfo.Title;
+            txtAuthor.Text = result.VolumeInfo.Authors.FirstOrDefault();
+            txtISBN.Text = isbn;
+            dtpDatePublished.Value = DateTime.Parse(result.VolumeInfo.PublishedDate);
         }
 
         private void btnAddBookFromAPI_Click(object sender, EventArgs e)
         {
-            string isbn = "978-1118847282";
-
-            try
-            {
-                new Program().Run().Wait();
-            }
-            catch (AggregateException ex)
-            {
-                foreach (var e in ex.InnerExceptions)
-                {
-                    MessageBox.Show("ERROR: " + e.Message);
-                }
-            }
-
-            //var output = BookSearch.SearchISBN(isbn);
-
-            //var result = output.Result;
-            //MessageBox.Show("\nBook Name: " + result.VolumeInfo.Title);
-            //MessageBox.Show("Author: " + result.VolumeInfo.Authors.FirstOrDefault());
-            //MessageBox.Show("Publisher: " + result.VolumeInfo.Publisher);
+            
         }
 
-        private async Task Run()
-        {
-            UserCredential credential;
-            using (var stream = new Google.Apis.Books.v1.BooksService
-            {
-                credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    new[] { BooksService.Scope.Books },
-                    "user", CancellationToken.None, new FileDataStore("Books.ListMyLibrary"));
-
-
-            // Create the service.
-            var service = new BooksService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = "Books API Sample",
-            }); }
 
         private void btnAddBookManual_Click(object sender, EventArgs e)
         {
@@ -100,50 +93,11 @@ namespace FinalProject_Guthrie
             System.Diagnostics.Process.Start("https://developers.google.com/books/");
         }
 
-        //public static async Task<Volume> SearchISBN(string isbn)
-        //{
-        //    var result = await service.Volumes.List(isbn).ExecuteAsync();
-        //    if (result != null && result.Items != null)
-        //    {
-        //        var item = result.Items.FirstOrDefault();
-        //        return item;
-        //    }
-        //    return null;
-        //}
-
-        //public static BooksService service = new BooksService(new BaseClientService.Initializer
-        //    {
-        //        ApplicationName = "ISBNBookSearch",
-        //        ApiKey = "ABCDEFGHIJKLMNOP123456789",  
-        //    });     // Place Google Books API key here
-
-        //public void TestIsbnSearch()
-        //{
-        //    string isbn = "0071807993";
-        //    var output = BookSearch.SearchISBN(isbn);
-
-        //    var result = output.Result;
-        //    MessageBox.Show("\nBook Name: " + result.VolumeInfo.Title);
-        //    MessageBox.Show("Author: " + result.VolumeInfo.Authors.FirstOrDefault());
-        //    MessageBox.Show("Publisher: " + result.VolumeInfo.Publisher);
-        //}
     }
-
     public class BookSearch
     {
-        //You need to substitute this with your own API key.
-        //For more information, visit http://wp.me/paUXZ-TY 
-        private static string API_KEY = "ABCDEFGHIJKLMNOP123456789";  // Place Google Books API key here
-
-        public static BooksService service = new BooksService(new BaseClientService.Initializer
-        {
-            ApplicationName = "ISBNBookSearch",
-            ApiKey = API_KEY,
-        });
-
         public static async Task<Volume> SearchISBN(string isbn)
         {
-            MessageBox.Show("Executing a book search request for ISBN: {0} ...", isbn);
             var result = await service.Volumes.List(isbn).ExecuteAsync();
 
             if (result != null && result.Items != null)
@@ -154,7 +108,10 @@ namespace FinalProject_Guthrie
             return null;
         }
 
+        public static BooksService service = new BooksService(new BaseClientService.Initializer
+            {
+                ApplicationName = "ISBNBookSearch",
+                ApiKey = "INSERT API KEY HERE",
+            });
     }
-
-
 }
