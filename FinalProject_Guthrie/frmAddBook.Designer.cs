@@ -56,10 +56,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.grpSeachOnline.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpEnterManually.SuspendLayout();
             this.grpTypeOfBook.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpSeachOnline
@@ -338,11 +341,27 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Title:";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatusStrip});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 538);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(512, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatusStrip
+            // 
+            this.lblStatusStrip.Name = "lblStatusStrip";
+            this.lblStatusStrip.Size = new System.Drawing.Size(0, 17);
+            // 
             // frmAddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 547);
+            this.ClientSize = new System.Drawing.Size(512, 560);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grpEnterManually);
             this.Controls.Add(this.radEnterInfoManual);
             this.Controls.Add(this.radSearchOnline);
@@ -356,6 +375,8 @@
             this.grpEnterManually.PerformLayout();
             this.grpTypeOfBook.ResumeLayout(false);
             this.grpTypeOfBook.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +412,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatusStrip;
     }
 }

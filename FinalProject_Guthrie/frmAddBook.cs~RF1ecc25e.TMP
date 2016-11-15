@@ -75,7 +75,7 @@ namespace FinalProject_Guthrie
                 txtAuthor.Text = result.VolumeInfo.Authors.FirstOrDefault();
                 txtISBN.Text = isbn;
                 dtpDatePublished.Value = DateTime.Parse(result.VolumeInfo.PublishedDate);
-                lstSubCategories.DataSource = result.VolumeInfo.Categories;
+                // lstSubCategories.DataSource = result.VolumeInfo.Categories;
             }
             else
             {
