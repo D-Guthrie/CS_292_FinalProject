@@ -109,6 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.cs" />
     <Compile Include="frmAddBook.cs">
       <SubType>Form</SubType>
     </Compile>
