@@ -13,36 +13,42 @@ namespace FinalProject_Guthrie
         private string _title;
         private DateTime _datePublished;
         private string _category;
-        private string _subcategories;
+        private List<string> _subcategories;
 
         public string ISBN
         {
             get { return _ISBN; }
+            set { _ISBN = value; }
         }
 
         public string Author
         {
             get { return _author; }
+            set { _author = value; }
         }
 
         public string Title
         {
             get { return _title; }
+            set { _title = value; }
         }
 
         public DateTime DatePublished
         {
             get { return _datePublished; }
+            set { _datePublished = value; }
         }
 
         public string Category
         {
             get { return _category; }
+            set { _category = value; }
         }
 
-        public string SubCategories
+        public List<string> SubCategories
         {
             get { return _subcategories; }
+            set { _subcategories = value; }
         }
     }
 }

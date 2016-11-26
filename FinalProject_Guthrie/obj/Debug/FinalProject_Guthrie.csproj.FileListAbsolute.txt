@@ -36,3 +36,11 @@ C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\log4net.xml
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\Newtonsoft.Json.xml
 C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\Zlib.Portable.xml
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\EntityFramework.dll
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\System.Data.SQLite.dll
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\EntityFramework.xml
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\guthd01\Desktop\School\CS292\FinalProject_Guthrie\FinalProject_Guthrie\bin\Debug\System.Data.SQLite.xml
