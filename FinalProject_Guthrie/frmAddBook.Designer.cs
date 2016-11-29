@@ -30,15 +30,13 @@
         {
             this.grpSeachOnline = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btnAddBookFromAPI = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
             this.btnSearchBooksAPI = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtISBNSearchAPI = new System.Windows.Forms.TextBox();
             this.radSearchOnline = new System.Windows.Forms.RadioButton();
             this.radEnterInfoManual = new System.Windows.Forms.RadioButton();
             this.grpEnterManually = new System.Windows.Forms.GroupBox();
-            this.btnAddBookManual = new System.Windows.Forms.Button();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.cboLocation = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,7 +57,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.grpSeachOnline.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpEnterManually.SuspendLayout();
             this.grpTypeOfBook.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -68,21 +65,19 @@
             // grpSeachOnline
             // 
             this.grpSeachOnline.Controls.Add(this.linkLabel1);
-            this.grpSeachOnline.Controls.Add(this.btnAddBookFromAPI);
             this.grpSeachOnline.Controls.Add(this.btnSearchBooksAPI);
             this.grpSeachOnline.Controls.Add(this.label1);
-            this.grpSeachOnline.Controls.Add(this.dataGridView1);
             this.grpSeachOnline.Controls.Add(this.txtISBNSearchAPI);
             this.grpSeachOnline.Location = new System.Drawing.Point(4, 35);
             this.grpSeachOnline.Name = "grpSeachOnline";
-            this.grpSeachOnline.Size = new System.Drawing.Size(501, 165);
+            this.grpSeachOnline.Size = new System.Drawing.Size(501, 108);
             this.grpSeachOnline.TabIndex = 0;
             this.grpSeachOnline.TabStop = false;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(9, 142);
+            this.linkLabel1.Location = new System.Drawing.Point(6, 75);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(348, 13);
             this.linkLabel1.TabIndex = 5;
@@ -90,19 +85,19 @@
             this.linkLabel1.Text = "This search uses the Google Books API. For more information, click here";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // btnAddBookFromAPI
+            // btnAddBook
             // 
-            this.btnAddBookFromAPI.Location = new System.Drawing.Point(405, 27);
-            this.btnAddBookFromAPI.Name = "btnAddBookFromAPI";
-            this.btnAddBookFromAPI.Size = new System.Drawing.Size(87, 39);
-            this.btnAddBookFromAPI.TabIndex = 4;
-            this.btnAddBookFromAPI.Text = "Add book";
-            this.btnAddBookFromAPI.UseVisualStyleBackColor = true;
-            this.btnAddBookFromAPI.Click += new System.EventHandler(this.btnAddBookFromAPI_Click);
+            this.btnAddBook.Location = new System.Drawing.Point(195, 444);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(87, 39);
+            this.btnAddBook.TabIndex = 4;
+            this.btnAddBook.Text = "Add book";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnSearchBooksAPI
             // 
-            this.btnSearchBooksAPI.Location = new System.Drawing.Point(199, 27);
+            this.btnSearchBooksAPI.Location = new System.Drawing.Point(213, 21);
             this.btnSearchBooksAPI.Name = "btnSearchBooksAPI";
             this.btnSearchBooksAPI.Size = new System.Drawing.Size(82, 39);
             this.btnSearchBooksAPI.TabIndex = 3;
@@ -118,14 +113,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "ISBN:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(483, 57);
-            this.dataGridView1.TabIndex = 1;
             // 
             // txtISBNSearchAPI
             // 
@@ -150,7 +137,7 @@
             // radEnterInfoManual
             // 
             this.radEnterInfoManual.AutoSize = true;
-            this.radEnterInfoManual.Location = new System.Drawing.Point(4, 209);
+            this.radEnterInfoManual.Location = new System.Drawing.Point(4, 161);
             this.radEnterInfoManual.Name = "radEnterInfoManual";
             this.radEnterInfoManual.Size = new System.Drawing.Size(175, 17);
             this.radEnterInfoManual.TabIndex = 2;
@@ -160,7 +147,6 @@
             // 
             // grpEnterManually
             // 
-            this.grpEnterManually.Controls.Add(this.btnAddBookManual);
             this.grpEnterManually.Controls.Add(this.cboCategory);
             this.grpEnterManually.Controls.Add(this.cboLocation);
             this.grpEnterManually.Controls.Add(this.label8);
@@ -177,21 +163,11 @@
             this.grpEnterManually.Controls.Add(this.label3);
             this.grpEnterManually.Controls.Add(this.label2);
             this.grpEnterManually.Enabled = false;
-            this.grpEnterManually.Location = new System.Drawing.Point(13, 232);
+            this.grpEnterManually.Location = new System.Drawing.Point(4, 184);
             this.grpEnterManually.Name = "grpEnterManually";
-            this.grpEnterManually.Size = new System.Drawing.Size(483, 301);
+            this.grpEnterManually.Size = new System.Drawing.Size(483, 239);
             this.grpEnterManually.TabIndex = 3;
             this.grpEnterManually.TabStop = false;
-            // 
-            // btnAddBookManual
-            // 
-            this.btnAddBookManual.Location = new System.Drawing.Point(35, 237);
-            this.btnAddBookManual.Name = "btnAddBookManual";
-            this.btnAddBookManual.Size = new System.Drawing.Size(108, 43);
-            this.btnAddBookManual.TabIndex = 16;
-            this.btnAddBookManual.Text = "Add Book";
-            this.btnAddBookManual.UseVisualStyleBackColor = true;
-            this.btnAddBookManual.Click += new System.EventHandler(this.btnAddBookManual_Click);
             // 
             // cboCategory
             // 
@@ -345,7 +321,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatusStrip});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 538);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 499);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(512, 22);
             this.statusStrip1.TabIndex = 4;
@@ -360,8 +336,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 560);
+            this.ClientSize = new System.Drawing.Size(512, 521);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.grpEnterManually);
             this.Controls.Add(this.radEnterInfoManual);
             this.Controls.Add(this.radSearchOnline);
@@ -370,7 +347,6 @@
             this.Text = "Add a book";
             this.grpSeachOnline.ResumeLayout(false);
             this.grpSeachOnline.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grpEnterManually.ResumeLayout(false);
             this.grpEnterManually.PerformLayout();
             this.grpTypeOfBook.ResumeLayout(false);
@@ -385,9 +361,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpSeachOnline;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtISBNSearchAPI;
-        private System.Windows.Forms.Button btnAddBookFromAPI;
+        private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnSearchBooksAPI;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radSearchOnline;
@@ -398,7 +373,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.Button btnAddBookManual;
         private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.ComboBox cboLocation;
         private System.Windows.Forms.Label label8;

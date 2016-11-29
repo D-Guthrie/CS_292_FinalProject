@@ -17,15 +17,21 @@ namespace FinalProject_Guthrie
     class BooksAPIUtil
     {
 
-        private Book currentBook = new Book();
+        private Book currentBook;
+
+        public Book GetBook(string pISBN)
+        {
+            GetInfo(pISBN);
+            return currentBook;
+        }
 
         public static BooksService service = new BooksService(new BaseClientService.Initializer
         {
             ApplicationName = "ISBNBookSearch",
-            ApiKey = "PLACE API KEY HERE!!!",               // PLACE API KEY HERE!!!
+            ApiKey = "INSERT API KEY HERE",               // PLACE API KEY HERE!!!
         });
 
-        public static async Task<Volume> SearchISBN(string isbn)
+        private static async Task<Volume> SearchISBN(string isbn)
         {
             var result = await service.Volumes.List(isbn).ExecuteAsync();
 
@@ -37,30 +43,24 @@ namespace FinalProject_Guthrie
             return null;
         }
 
-        public async void GetInfo(string pISBN)
+        private async void GetInfo(string pISBN)
         {
             string isbn = pISBN;
-            var output = await SearchISBN(isbn);
-            var result = output;
+            var result = await SearchISBN(isbn);
 
             if (result != null)
             {
-                // currentBook = new Book();
+                currentBook = new Book();
 
                 currentBook.Title = result.VolumeInfo.Title;
                 currentBook.Author = result.VolumeInfo.Authors.FirstOrDefault();
                 currentBook.ISBN = isbn;
                 currentBook.DatePublished = DateTime.Parse(result.VolumeInfo.PublishedDate);
 
-                // currentBook.SubCategories = result.VolumeInfo.Categories;
+                currentBook.SubCategories = (List<string>)result.VolumeInfo.Categories;
 
                 currentBook.Category = result.VolumeInfo.MainCategory;
             }
-            else
-            {
-                // lblStatusStrip.Text = "Book not found";
-            }
-
         }
 
     }
